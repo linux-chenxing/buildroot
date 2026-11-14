@@ -1,3 +1,44 @@
+2026.11-rc1, released November 14th, 2026
+
+	Fixes all over the tree and new features.
+
+        Architectures:
+        - Default architecture is now AArch64 (arm64) rather than i386.
+
+        Toolchain:
+	- Support for Linux 7.3.x headers
+        - Binutils 2.47 support, now defaults to 2.46.1.
+        - Bootlin toolchains updated to 2026.08, with stable using
+          binutils 2.45.1, gcc 15.3, gdb 16.3, 5.10 headers, bleeding
+          edge using gcc 16.2, binutils 2.46.1, gdb 17.1, headers
+          6.12)
+
+        Infrastructure:
+        - libtool patching now also handles 2.6.x versions
+
+        - The golang module proxy (https://proxy.golang.org) is used
+          by default when vendoring go packages. Proxying and what URL
+          to use can be configured using BR2_GOPROXY.
+
+	- BR2_DOWNLOAD_FORCE_CHECK_HASHES=y is supposed to make the
+	  build fail if any download cannot be successfully verified
+	  against a known hash. It did not do that if there is no hash
+	  file at all. This is now fixed.
+
+	- Qmake infrastructure now also supports Qt6.
+
+	New packages: btop, chawan, heaptrack, httpdate, imx-oei,
+	imx-sm, jwt-cpp, libaec, librdkafka, luaunbound, netbird,
+	nettest, plutovg, python-cramjam, python-httpcore2,
+	python-httpx2, python-nats-py, python-opentelemetry-api,
+	python-questionary, python-serialx, python-servestatic,
+	python-shellingham, python-truststore, python-typer-slim,
+	python-typer, qrtr. qt6coap, raw2rgbpnm, rmtfs, sdl3_net,
+	sema-linux, tqftpserv, uthash
+
+	Removed packages: heirloom-mailx, htpdate, ifenslave,
+	libcppprestsdk, libplatform, rtai, szip
+
 2026.08.1, released October 22, 2026
 
 	Changes with potentially large impact:
