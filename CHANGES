@@ -27,6 +27,10 @@
 
 	- Qmake infrastructure now also supports Qt6.
 
+	New defconfigs: Altera SoCFPGA Agilex 5 SoC, Freescale
+	imx91frdm & imx93frdm using mainline, imx95frdm, Raspberrypi
+	CM4 using U-Boot
+
 	New packages: btop, chawan, heaptrack, httpdate, imx-oei,
 	imx-sm, jwt-cpp, libaec, librdkafka, luaunbound, netbird,
 	nettest, plutovg, python-cramjam, python-httpcore2,
